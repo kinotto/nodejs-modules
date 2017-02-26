@@ -37,16 +37,20 @@ db.once('open', function(){
       author: 'Paul McVites'
     })
     setTimeout(function(){
-      dish.save(function(err, dish){
-        if (err) throw err;
-        console.log('Updated comments');
-        console.log(dish);
-        db.collection('dishes').drop(function(){
-          console.log('Dishes collection dropped');
-          db.close();
-        })
+      Dishes.findByIdAndUpdate(dish._id, {
+        $set: dish
+      }, {
+        new: true //return the updated instance
+      }, function(err, dish){
+         if (err) throw err;
+         console.log('Updated comments');
+         console.log(dish);
+         db.collection('dishes').drop(function(){
+           console.log('Dishes collection dropped');
+           db.close();
+         })
       })
-    }, 2000);
+    }, 1000);
   })
 
 })
