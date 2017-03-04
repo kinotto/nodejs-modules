@@ -1,0 +1,27 @@
+{
+  "name": "nodejs-coursera",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kinotto/nodejs-modules.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kinotto/nodejs-modules/issues"
+  },
+  "homepage": "https://github.com/kinotto/nodejs-modules#readme",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "mongoose": "^4.8.5",
+    "mongoose-currency": "^0.2.0",
+    "morgan": "^1.8.1"
+  }
+}
